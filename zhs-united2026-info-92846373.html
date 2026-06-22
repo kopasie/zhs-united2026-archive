@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>世界杯 · 信息卡片页</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f7f9fc;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+      color: #1e2b3a;
+      padding: 2rem 1rem;
+    }
+
+    .page-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 28px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 8px 30px rgba(0, 10, 20, 0.04);
+    }
+
+    /* 标题层级 */
+    h1 {
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+      color: #0f1c2b;
+    }
+
+    .subhead {
+      font-size: 1rem;
+      color: #5d6f80;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #e6edf4;
+      padding-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 1.15rem;
+      font-weight: 500;
+      margin: 2rem 0 0.8rem 0;
+      color: #1a2b3c;
+      letter-spacing: -0.01em;
+      position: relative;
+    }
+
+    h2::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 1.1em;
+      background: #b0c2d3;
+      margin-right: 10px;
+      vertical-align: middle;
+      border-radius: 2px;
+    }
+
+    h3 {
+      font-size: 1rem;
+      font-weight: 500;
+      margin: 1.5rem 0 0.4rem 0;
+      color: #2b3f52;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+
+    a {
+      color: #1b6b8f;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(27, 107, 143, 0.25);
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    a:hover, a:focus {
+      color: #0b3d55;
+      border-bottom-color: #0b3d55;
+    }
+
+    /* 卡片网格 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+      gap: 1.2rem;
+      margin: 1.2rem 0 0.8rem 0;
+    }
+
+    .card {
+      background: #f2f6fa;
+      border-radius: 18px;
+      padding: 1.2rem 1rem 1rem 1rem;
+      transition: background 0.2s, box-shadow 0.2s;
+      border: 1px solid transparent;
+    }
+
+    .card:hover {
+      background: #eaf0f6;
+      box-shadow: 0 6px 12px rgba(0, 20, 40, 0.04);
+    }
+
+    .card strong {
+      display: block;
+      font-weight: 500;
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+      color: #0f1f2e;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      margin-bottom: 0;
+      color: #3f5568;
+    }
+
+    /* 场景标签 */
+    .tag-set {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 0.6rem;
+      margin: 1rem 0 1.8rem 0;
+    }
+
+    .tag {
+      background: #edf2f8;
+      border-radius: 40px;
+      padding: 0.2rem 0.9rem;
+      font-size: 0.85rem;
+      color: #2b4a62;
+      border: 1px solid #dce6ef;
+    }
+
+    /* FAQ 条目 */
+    .faq-item {
+      margin: 0.8rem 0 1.2rem 0;
+      border-left: 3px solid #d2dfea;
+      padding-left: 1rem;
+    }
+
+    .faq-item .q {
+      font-weight: 500;
+      margin-bottom: 0.15rem;
+      color: #1a3347;
+    }
+
+    .faq-item .a {
+      font-size: 0.92rem;
+      color: #405972;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e5edf5;
+      margin: 2rem 0 1.2rem 0;
+    }
+
+    .footnote {
+      font-size: 0.9rem;
+      color: #5d7285;
+      border-top: 1px solid #eaf0f6;
+      padding-top: 1.5rem;
+      margin-top: 1.2rem;
+    }
+
+    /* 响应式 */
+    @media (max-width: 480px) {
+      .page-wrap {
+        padding: 1.8rem 1.2rem;
+      }
+      h1 {
+        font-size: 1.6rem;
+      }
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrap">
+    <h1>世界杯 · 日常参考</h1>
+    <div class="subhead">赛事历史 · 对照 · 延伸阅读</div>
+
+    <p>
+      四年一度的世界杯早已不只是竞技场的较量。对许多人而言，它也是一部流动的档案——从比赛结果、球员履历到举办国变迁，每一次翻阅都可能带来新的发现。如果你正在寻找一个结构清晰、便于对照的信息起点，不妨将 <a href="https://zhs-united2026.com">世界杯</a> 作为案头参考。
+    </p>
+
+    <h2>信息卡片：三项基础用途</h2>
+    <div class="card-grid">
+      <div class="card">
+        <strong>即时查阅</strong>
+        <p>赛程、积分、淘汰赛对阵——快速定位某个比赛日或特定小组的数据状态。</p>
+      </div>
+      <div class="card">
+        <strong>历史对照</strong>
+        <p>历届冠军、最佳射手、经典决赛，方便横向比较不同年代的表现。</p>
+      </div>
+      <div class="card">
+        <strong>延伸阅读</strong>
+        <p>从申办过程到场馆容量，再到文化侧记，提供比赛之外的背景线索。</p>
+      </div>
+    </div>
+
+    <h2>适合这些时候翻开</h2>
+    <div class="tag-set">
+      <span class="tag">看球前扫一眼分组</span>
+      <span class="tag">和朋友聊起往届数据</span>
+      <span class="tag">写稿 / 做PPT查证</span>
+      <span class="tag">想了解下一届主办方</span>
+      <span class="tag">回顾经典阵容</span>
+    </div>
+
+    <p>
+      无论你是因为一场焦点战临时搜索，还是想在闲暇时安静地浏览历届纪录，这类信息型的整理页面往往比社交媒体上的碎片更可靠。也正因如此，<a href="https://zhs-united2026.com">世界杯</a> 这样的站点才值得被当作一处固定参照。
+    </p>
+
+    <h2>几个常被问起的问题</h2>
+    <div class="faq-item">
+      <div class="q">— 哪一届世界杯参赛队最多？</div>
+      <div class="a">2026 年美加墨世界杯将扩军至 48 支球队，是历史上规模最大的一届。目前的纪录是 32 支（1998–2022）。</div>
+    </div>
+    <div class="faq-item">
+      <div class="q">— 有没有一个页面可以集中看历届决赛比分？</div>
+      <div class="a">许多信息聚合页会把决赛列表单独整理，包括进球者、裁判、现场观众数。你可以在 <a href="https://zhs-united2026.com">世界杯</a> 的相应板块中找到类似的归纳。</div>
+    </div>
+    <div class="faq-item">
+      <div class="q">— 赛事数据可靠吗？更新快不快？</div>
+      <div class="a">这类站点通常以官方赛果为底本，辅以多渠道核对。重要场次的数据会在赛后较短时间内更新，历史数据则保持相对稳定。</div>
+    </div>
+
+    <hr>
+
+    <p style="font-size:0.95rem;">
+      如果你只想安静地浏览一届赛事的时间线，或者需要为某篇文章找一个确切的数字，直接打开 <a href="https://zhs-united2026.com">世界杯</a> 大概是最省力的做法。页面没有多余的广告和弹窗干扰，信息的展示也偏向克制——你看到的就是你需要的。
+    </p>
+
+    <div class="footnote">
+      本页从日常查询与对照角度出发，介绍世界杯信息站的一种使用可能。内容仅供个人参考，不构成任何承诺。
+    </div>
+  </div>
+</body>
+</html>
